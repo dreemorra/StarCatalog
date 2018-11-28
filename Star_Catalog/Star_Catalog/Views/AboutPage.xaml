@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Star_Catalog.Views.AboutPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout>
+                <Frame BackgroundColor="Transparent">
+                    <Image Source="xamarin.png"
+                       HorizontalOptions="Center"
+                     />
+                </Frame>
+                <Label x:Name="About_Xamarin"
+                       HorizontalOptions="Center" FontSize="16"/>
+            </StackLayout>
+            <StackLayout>
+            <Label x:Name="AboutAppText"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="16" 
+                HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

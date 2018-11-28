@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Star_Catalog.Views.DSOPage">
+    <StackLayout>
+        
+        <ListView x:Name="ConstellationsListView"
+                  ItemsSource="{Binding Items}"
+                  
+                  CachingStrategy="RecycleElement"
+                  RowHeight="56"
+                  HasUnevenRows="True">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout 
+                           Orientation="Horizontal">
+                            <Frame 
+                                BackgroundColor="Cyan"
+                                Margin="16, 8"
+                                Padding="20"
+                                CornerRadius="1000"/>
+                            <Label
+                                Text="{Binding .}" 
+                                Font="Medium"
+                                FontSize="16" 
+                                HorizontalTextAlignment="Start" 
+                                VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

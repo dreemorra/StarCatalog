@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Star_Catalog.Views.MenuPage"
+             Title="Menu"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HeightRequest="150">
+                <Image Source="https://apod.nasa.gov/apod/image/1505/Horsehead_Colombari_2035.jpg" 
+                       HorizontalOptions="CenterAndExpand" 
+                       Scale="3"/>
+            </Frame>
+            <ListView x:Name="ListViewMenu"
+                      SelectionMode="Single" 
+                      VerticalOptions="Center" 
+                      SeparatorVisibility="None"
+                      HasUnevenRows="True"
+                      RowHeight="56">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Spacing="16" Orientation="Horizontal">
+                                <Frame BackgroundColor="Transparent">
+                                    <Image Source="{Binding Icon}"
+                                           />
+                                </Frame>
+                                <Label Text="{Binding Title}" 
+                                       VerticalTextAlignment="Center" 
+                                       FontSize="16" 
+                                       Font="Regular"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

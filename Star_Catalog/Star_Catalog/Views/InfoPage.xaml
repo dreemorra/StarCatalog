@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Star_Catalog.Views"
+            x:Class="Star_Catalog.Views.InfoPage">
+    <StackLayout>
+        <Frame HeightRequest="150">
+            <Image x:Name="imagee" 
+                   Source="https://apod.nasa.gov/apod/image/1505/Horsehead_Colombari_2035.jpg" 
+                   HorizontalOptions="CenterAndExpand" 
+                   Scale="3"/>
+        </Frame>
+        <TableView HasUnevenRows="True">
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection x:Name="Section_Description">
+                        <ViewCell>
+                            <Label x:Name="label_description" FontSize="16"/>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection x:Name="Section_Characteristics">
+                        <ViewCell>
+                            <Label x:Name="label_characteristics" FontSize="16"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+    </StackLayout>
+</ContentPage>
