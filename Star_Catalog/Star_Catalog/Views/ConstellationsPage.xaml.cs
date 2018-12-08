@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Star_Catalog.Models;
@@ -16,23 +12,20 @@ namespace Star_Catalog.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConstellationsPage : ContentPage
     {
-        ConstellationsViewModel constellationsView;
-        IOrderedEnumerable<string> sortedList = null;
-        List<string> tempList;
-        
+        ConstellationsViewModel consView;
+        IOrderedEnumerable<Constellation> sortedList = null;
+
         public ConstellationsPage()
         {
             InitializeComponent();
+            consView = new ConstellationsViewModel();
             Title = Locales.Title_Constellations;
 
-            constellationsView = new ConstellationsViewModel();
-
-            tempList = constellationsView.constellations_string;
-            ConstellationsListView.ItemsSource = tempList;
-
+            searchbar.TextChanged += SearchBar_TextChanged;
+            ConstellationsListView.ItemsSource = consView.constellations;
+            ConstellationsListView.ItemSelected += async (s, e) => { await ConstellationsListView_ItemSelected(s, e); };
             ToolbarItems.Add(new ToolbarItem("", "sort_icon.xml", async () => { await Sort_click(); }, priority: 2));
             ToolbarItems.Add(new ToolbarItem("", "search_icon.xml", () => { ToggleSearchbar(); }, priority: 1));
-
         }
 
         private void ToggleSearchbar()
@@ -43,10 +36,9 @@ namespace Star_Catalog.Views
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                ConstellationsListView.ItemsSource = constellationsView.constellations_string;
+                ConstellationsListView.ItemsSource = consView.constellations;
             else
-                ConstellationsListView.ItemsSource = constellationsView.constellations_string.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
-            
+                ConstellationsListView.ItemsSource = consView.constellations.Where(i => i.Name.ToLower().Contains(e.NewTextValue.ToLower()));
         }
 
         private async Task Sort_click()
@@ -56,16 +48,12 @@ namespace Star_Catalog.Views
             {
                 case "A-Z":
                     {
-                        sortedList = from element in constellationsView.constellations_string
-                                     orderby element ascending
-                                     select element;                        
+                        sortedList = consView.constellations.OrderBy((obj) => { return obj.Name; });
                         break;
                     }
                 case "Z-A":
                     {
-                        sortedList = from element in constellationsView.constellations_string
-                                     orderby element descending
-                                     select element;
+                        sortedList = consView.constellations.OrderByDescending((obj) => { return obj.Name; });
                         break;
                     }
                 case null:
@@ -77,21 +65,14 @@ namespace Star_Catalog.Views
             Debug.WriteLine("Action: " + action);
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async Task ConstellationsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.SelectedItem == null)
                 return;
-           
-
-            Constellation clicked_item = constellationsView.constellations.Find(item => item.Name.Contains(e.Item as string));
-
             InfoPage page = new InfoPage();
             await Navigation.PushModalAsync(page);
-
-            page.SetConstellationInfo(clicked_item);
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            page.SetConstellationInfo((Constellation)e.SelectedItem);
+            ConstellationsListView.SelectedItem = null;
         }
     }
 }

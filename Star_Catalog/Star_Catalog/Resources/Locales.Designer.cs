@@ -79,6 +79,78 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bayer:.
+        /// </summary>
+        internal static string Bayer {
+            get {
+                return ResourceManager.GetString("Bayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bayer/Flamsteed designation:.
+        /// </summary>
+        internal static string BF {
+            get {
+                return ResourceManager.GetString("BF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gliese Catalog:.
+        /// </summary>
+        internal static string Gliese {
+            get {
+                return ResourceManager.GetString("Gliese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Henry Draper catalog:.
+        /// </summary>
+        internal static string HD {
+            get {
+                return ResourceManager.GetString("HD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hipparcos catalog:.
+        /// </summary>
+        internal static string HIP {
+            get {
+                return ResourceManager.GetString("HIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Harvard Revised catalog:.
+        /// </summary>
+        internal static string HR {
+            get {
+                return ResourceManager.GetString("HR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aphelion:.
+        /// </summary>
+        internal static string Info_Aphelion {
+            get {
+                return ResourceManager.GetString("Info_Aphelion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AU.
+        /// </summary>
+        internal static string Info_AU {
+            get {
+                return ResourceManager.GetString("Info_AU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Characteristics.
         /// </summary>
         internal static string Info_Characteristics {
@@ -106,6 +178,24 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to d.
+        /// </summary>
+        internal static string Info_Days {
+            get {
+                return ResourceManager.GetString("Info_Days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Density:.
+        /// </summary>
+        internal static string Info_Density {
+            get {
+                return ResourceManager.GetString("Info_Density", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string Info_Description {
@@ -120,6 +210,24 @@ namespace Star_Catalog.Resources {
         internal static string Info_Distance {
             get {
                 return ResourceManager.GetString("Info_Distance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eccentricity:.
+        /// </summary>
+        internal static string Info_Eccentricity {
+            get {
+                return ResourceManager.GetString("Info_Eccentricity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gravity:.
+        /// </summary>
+        internal static string Info_Gravity {
+            get {
+                return ResourceManager.GetString("Info_Gravity", resourceCulture);
             }
         }
         
@@ -169,11 +277,38 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Orbital period:.
+        /// </summary>
+        internal static string Info_OrbitalP {
+            get {
+                return ResourceManager.GetString("Info_OrbitalP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orbital speed:.
+        /// </summary>
+        internal static string Info_OrbitalS {
+            get {
+                return ResourceManager.GetString("Info_OrbitalS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to pc.
         /// </summary>
         internal static string Info_Parsec {
             get {
                 return ResourceManager.GetString("Info_Parsec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perihelion:.
+        /// </summary>
+        internal static string Info_Perihelion {
+            get {
+                return ResourceManager.GetString("Info_Perihelion", resourceCulture);
             }
         }
         
@@ -187,6 +322,24 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Satellites:.
+        /// </summary>
+        internal static string Info_Satellites {
+            get {
+                return ResourceManager.GetString("Info_Satellites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Semi-major axis:.
+        /// </summary>
+        internal static string Info_SemiMajor {
+            get {
+                return ResourceManager.GetString("Info_SemiMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spectral type:.
         /// </summary>
         internal static string Info_Spectral {
@@ -196,7 +349,7 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stars:.
+        ///   Looks up a localized string similar to Brightest stars:.
         /// </summary>
         internal static string Info_Stars {
             get {
@@ -205,7 +358,25 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Radial Velocity:.
+        ///   Looks up a localized string similar to Synodical period:.
+        /// </summary>
+        internal static string Info_Synodic {
+            get {
+                return ResourceManager.GetString("Info_Synodic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temperature:.
+        /// </summary>
+        internal static string Info_Temperature {
+            get {
+                return ResourceManager.GetString("Info_Temperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radial velocity:.
         /// </summary>
         internal static string Info_Velocity {
             get {
@@ -250,6 +421,15 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Беларуская.
+        /// </summary>
+        internal static string Settings_LangBY {
+            get {
+                return ResourceManager.GetString("Settings_LangBY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         internal static string Settings_LangEN {
@@ -259,7 +439,7 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Russian.
+        ///   Looks up a localized string similar to Русский.
         /// </summary>
         internal static string Settings_LangRU {
             get {

@@ -4,7 +4,7 @@
              x:Class="Star_Catalog.Views.MenuPagePage"
              BackgroundImage="https://apod.nasa.gov/apod/image/1606/SagTrip_q100_watermark_CopyrightAndys_Astropix2016.jpg">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#1f1f1f">
             <Label x:Name="Welcome_Text"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="Center"

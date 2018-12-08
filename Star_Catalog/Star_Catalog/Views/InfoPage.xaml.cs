@@ -26,29 +26,50 @@ namespace Star_Catalog.Views
 
         public void SetStarInfo(Star item)
         {
-            label_description.Text = $" {Locales.Info_Name} {item.ProperName} \n HIP: {item.HIP}";
+            label_description.Text = 
+                $" {Locales.Info_Name} {item.proper} \n " +
+                $"{Locales.HIP} HIP {item.hip} \n " +
+                $"{Locales.BF} {item.bf} \n " +
+                $"{Locales.Bayer} {item.bayer} \n " +
+                $"{Locales.HD} {item.hd} \n " +
+                $"{Locales.HR} HR {item.hr} \n " +
+                $"{Locales.Gliese} {item.gl} \n ";
             label_characteristics.Text = 
-                $"{Locales.Info_Magnitude} {item.Magnitude} \n " +
-                $"{Locales.Info_Distance} {item.Distance} {Locales.Info_Parsec}\n " +
-                $"{Locales.Info_Luminocity} {item.Luminocity} L\n " +
-                $"{Locales.Info_Velocity} {item.RadialVelocity} {Locales.Info_VelocityDim}\n " +
-                $"{Locales.Info_Spectral} {item.Spectrum} \n " +
-                $"{Locales.Info_CI} {item.ColorIndex} \n " +
-                $"{Locales.Info_Constellation} {item.ConstellationName}";
+                $" {Locales.Info_Magnitude} {item.mag} ({item.var_min} - {item.var_max}) \n " +
+                $"{Locales.Info_Distance} {item.dist} {Locales.Info_Parsec}\n " +
+                $"{Locales.Info_Luminocity} {item.lum} L\n " +
+                $"{Locales.Info_Temperature} {item.Temperature} K\n " +
+                $"{Locales.Info_Velocity} {item.rv} {Locales.Info_VelocityDim}\n " +
+                $"{Locales.Info_Spectral} {item.spect} \n " +
+                $"{Locales.Info_CI} {item.ci} \n " +
+                $"{Locales.Info_Constellation} {item.con}";
+            background.BackgroundColor = item.Color;
     }
 
         public void SetConstellationInfo(Constellation item)
         {
             label_description.Text = $" {Locales.Info_Name} {item.Name} \n {item.Description}";
-            label_characteristics.Text = $" {Locales.Info_Stars}";
-            imagee.Source = $"https://en.wikipedia.org/wiki/{item.Name}#/media/File:{item.Name}_IAU.svg";
+            label_characteristics.Text = $" {Locales.Info_Stars} {item.members}";
+            imagee.Source = item.pic;
         }
 
         public void SetPlanetInfo(Planet item)
         {
-            label_description.Text = $" {Locales.Info_Name} {item.Name}";
-            label_characteristics.Text = $" {Locales.Info_Radius} {item.Radius} {Locales.Info_Meters} \n " +
-                $"{Locales.Info_Mass} {item.Mass} {Locales.Info_Weight} ";
+            label_description.Text = $" {Locales.Info_Name} {item.Name} \n {item.Description}";
+            label_characteristics.Text = 
+                $" {Locales.Info_Aphelion} {item.aphelion} {Locales.Info_AU}\n " +
+                $"{Locales.Info_Perihelion} {item.perihelion} {Locales.Info_AU}\n " +
+                $"{Locales.Info_SemiMajor} {item.smaxis} {Locales.Info_AU}\n " +
+                $"{Locales.Info_Eccentricity} {item.eccentricity} \n " +
+                $"{Locales.Info_OrbitalP} {item.orbitalperiod} {Locales.Info_Days}\n " +
+                $"{Locales.Info_Synodic} {item.synodicperiod} {Locales.Info_Days}\n " +
+                $"{Locales.Info_OrbitalS} {item.orbitalspeed} {Locales.Info_VelocityDim}\n " +
+                $"{Locales.Info_Radius} {item.radius} {Locales.Info_Meters} \n " +
+                $"{Locales.Info_Mass} {item.mass} {Locales.Info_Weight} \n " +
+                $"{Locales.Info_Density} {item.density} \n " +
+                $"{Locales.Info_Gravity} {item.gravity} \n " +
+                $"{Locales.Info_Satellites} {item.satellites}";
+            imagee.Source = item.pic;
         }
     }
 }

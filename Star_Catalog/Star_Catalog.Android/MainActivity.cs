@@ -1,13 +1,8 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using Android.Content.Res;
 using Android.OS;
 using System.IO;
-using System.Threading.Tasks;
-using Android.Content;
 
 namespace Star_Catalog.Droid
 {
@@ -17,15 +12,37 @@ namespace Star_Catalog.Droid
     {
         static int theme = 0;
 
+        private void CopyAsset(string filename)
+        {
+            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string jsonPath = Path.Combine(path, filename);
+            using (var br = new BinaryReader(Application.Context.Assets.Open(filename)))
+            {
+                using (var bw = new BinaryWriter(new FileStream(jsonPath, FileMode.Create)))
+                {
+                    byte[] buffer = new byte[2048];
+                    int length = 0;
+                    while ((length = br.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        bw.Write(buffer, 0, length);
+                    }
+                }
+            }
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            CopyAsset("constellations.json");
+            CopyAsset("planets.json");
             var app = new App();
             LoadApplication(app);
             
+
             App.BatmanMode += () =>
             {
                 theme = (theme + 1) % 2;

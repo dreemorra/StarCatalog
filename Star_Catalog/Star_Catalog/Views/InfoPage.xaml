@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:Star_Catalog.Views"
             x:Class="Star_Catalog.Views.InfoPage">
-    <StackLayout>
-        <Frame HeightRequest="150">
-            <Image x:Name="imagee" 
-                   Source="https://apod.nasa.gov/apod/image/1505/Horsehead_Colombari_2035.jpg" 
+    <StackLayout BackgroundColor="#1f1f1f">
+        <Frame HeightRequest="150" x:Name="background">
+            <Image x:Name="imagee"
                    HorizontalOptions="CenterAndExpand" 
                    Scale="3"/>
         </Frame>

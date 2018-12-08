@@ -11,7 +11,8 @@ namespace Star_Catalog.Views
 {
     public partial class MainPage : MasterDetailPage
     {
-       
+        public static Dictionary<int, NavigationPage> Pages = new Dictionary<int, NavigationPage>();
+
         public MainPage()
         {
             Master = new MenuPage();
@@ -22,33 +23,39 @@ namespace Star_Catalog.Views
 
         public async Task GoToPage(int pageID)
         {
+            if (!Pages.ContainsKey(pageID))
+            {
                 switch ((MenuItemType)pageID)
                 {
-                case MenuItemType.Constellations:
-                    await Detail.Navigation.PushAsync(new ConstellationsPage());
-                    break;
-                case MenuItemType.Stars:
-                    await Detail.Navigation.PushAsync(new StarsPage());
-                    break;
-                case MenuItemType.Planets:
-                    await Detail.Navigation.PushAsync(new PlanetsPage());
-                    break;
-                case MenuItemType.DSO:
-                    await Detail.Navigation.PushAsync(new DSOPage());
-                    break;
-                case MenuItemType.Settings:
-                    await Detail.Navigation.PushAsync(new SettingsPage());
-                    break;
-                case MenuItemType.About:
-                    await Detail.Navigation.PushAsync(new AboutPage());
-                    break;
-                    
+                    case MenuItemType.About:
+                        Pages.Add(pageID, new NavigationPage(new AboutPage()));
+                        break;
+                    case MenuItemType.Constellations:
+                        Pages.Add(pageID, new NavigationPage(new ConstellationsPage()));
+                        break;
+                    case MenuItemType.DSO:
+                        Pages.Add(pageID, new NavigationPage(new DSOPage()));
+                        break;
+                    case MenuItemType.Planets:
+                        Pages.Add(pageID, new NavigationPage(new PlanetsPage()));
+                        break;
+                    case MenuItemType.Settings:
+                        Pages.Add(pageID, new NavigationPage(new SettingsPage()));
+                        break;
+                    case MenuItemType.Stars:
+                        Pages.Add(pageID, new NavigationPage(new StarsPage()));
+                        break;
                 }
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                await Task.Delay(100);
             }
-            IsPresented = false;
+
+            var newPage = Pages[pageID];
+            if (newPage != null && Detail != newPage)
+            {
+                newPage.Parent = null;
+                Detail = newPage;
+                await Task.Delay(200);
+                IsPresented = false;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Star_Catalog.Views.SettingsPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" BackgroundColor="#1f1f1f">
             <StackLayout Orientation='Horizontal' HorizontalOptions="FillAndExpand">
                 <Label Text="Dark theme" FontSize="Large" Margin="10" HorizontalOptions="Start"/>
                 <StackLayout HorizontalOptions="EndAndExpand">
@@ -13,10 +13,10 @@
                         HorizontalOptions="End" Margin="10"/>
                 </StackLayout>
             </StackLayout>
-            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="Layout_Lang">
-                <Label x:Name="Lang_Label" FontSize="Large" Margin="10" HorizontalOptions="StartAndExpand"/>
+            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" x:Name="Layout_Lang" Margin="10">
+                <Label x:Name="Lang_Label" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                 <StackLayout HorizontalOptions="EndAndExpand">
-                    <Picker x:Name="PickLang" Margin="10" HorizontalOptions="FillAndExpand" WidthRequest="150"/>
+                    <Picker x:Name="PickLang" HorizontalOptions="FillAndExpand" WidthRequest="110"/>
                 </StackLayout>
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">

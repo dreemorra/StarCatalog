@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "26cabd7b0f89a101b2f3d6f7104f93d628be6d0e"
+    "signature": "8b5bfdac3cf89749a65cae92f6a8b6326669453d"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,38 +9,19 @@
     ".NETStandard,Version=v2.0/": {
       "Star_Catalog/1.0.0": {
         "dependencies": {
-          "CsvHelper": "8.0.0-beta01",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.1-beta1",
-          "Xamarin.Forms": "3.1.0.697729",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "runtime": {
           "Star_Catalog.dll": {}
         },
         "resources": {
+          "be-BY/Star_Catalog.resources.dll": {
+            "locale": "be-BY"
+          },
           "ru-RU/Star_Catalog.resources.dll": {
             "locale": "ru-RU"
-          }
-        }
-      },
-      "CsvHelper/8.0.0-beta01": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.4.0",
-          "System.Reflection.TypeExtensions": "4.4.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/CsvHelper.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
-          }
-        }
-      },
-      "Microsoft.CSharp/4.4.0": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.CSharp.dll": {
-            "assemblyVersion": "4.0.3.0",
-            "fileVersion": "4.6.25519.3"
           }
         }
       },
@@ -55,53 +36,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.1.22628"
-          }
-        }
-      },
-      "sqlite-net-pcl/1.5.231": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3",
-          "SQLitePCLRaw.bundle_green": "1.1.11"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {
-            "assemblyVersion": "1.5.231.0",
-            "fileVersion": "1.5.231.0"
-          }
-        }
-      },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3",
-          "SQLitePCLRaw.core": "1.1.11"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
-            "assemblyVersion": "1.1.11.121",
-            "fileVersion": "1.0.0.0"
-          },
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
-            "assemblyVersion": "1.1.11.121",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SQLitePCLRaw.core/1.1.11": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
-            "assemblyVersion": "1.1.11.121",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "System.Reflection.TypeExtensions/4.4.0": {
-        "runtime": {
-          "lib/netstandard2.0/System.Reflection.TypeExtensions.dll": {
-            "assemblyVersion": "4.1.2.0",
-            "fileVersion": "4.6.25519.3"
           }
         }
       },
@@ -129,73 +63,31 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CsvHelper/8.0.0-beta01": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8doP4+K/GMAWARODinGFN19fAFIQpxbeoVdXBuLitr0mP5EG3ugokz8xWGw+dPLxMckVyIBOxJ/pakZKa1fGwg==",
-      "path": "csvhelper/8.0.0-beta01",
-      "hashPath": "csvhelper.8.0.0-beta01.nupkg.sha512"
-    },
-    "Microsoft.CSharp/4.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ShGjgRL3UHUXcoPSlq8jDB6b+9WHo4n8VcY9ex7egt6kuHFuK3Z6BUN9ClF3Y8dR1yIoaRkHPQBfX/IH5i/YXg==",
-      "path": "microsoft.csharp/4.4.0",
-      "hashPath": "microsoft.csharp.4.4.0.nupkg.sha512"
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "sha512-R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.1-beta1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cmCtkmZzWoHcwh96riskpZW9RqrAERDTCrWWXwfTdnKqOUIy2AMFF6Jje2jjKIoSVekwoTmf+WRr9cGRx8hRsQ==",
+      "sha512": "sha512-lOrrJQNqp777rhIh7943aQ0v7C8FQELEhsSxgqQ9hrUUwfbl3HaMdeLKn6NuHEb3RU3W/+LJKMnJBTP2mGDseQ==",
       "path": "newtonsoft.json/12.0.1-beta1",
       "hashPath": "newtonsoft.json.12.0.1-beta1.nupkg.sha512"
-    },
-    "sqlite-net-pcl/1.5.231": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
-      "path": "sqlite-net-pcl/1.5.231",
-      "hashPath": "sqlite-net-pcl.1.5.231.nupkg.sha512"
-    },
-    "SQLitePCLRaw.bundle_green/1.1.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HOD1/Jg9VZtrOyPUCD9reQOXHq4r+fNe24qw5nghuiUcKch+9jePeRpt6MqGGUFhg2KW89KvE/RFlhpbfF8pKA==",
-      "path": "sqlitepclraw.bundle_green/1.1.11",
-      "hashPath": "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512"
-    },
-    "SQLitePCLRaw.core/1.1.11": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
-      "path": "sqlitepclraw.core/1.1.11",
-      "hashPath": "sqlitepclraw.core.1.1.11.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-JRxOAH6by+wn1gNnZc9jf2HbO/szhMJuLY2w44nEW77354WntXlFzWSVkx6280Uvcl3URZ/At+444vjX0/X1Aw==",
-      "path": "system.reflection.typeextensions/4.4.0",
-      "hashPath": "system.reflection.typeextensions.4.4.0.nupkg.sha512"
     },
     "Xamarin.Forms/3.1.0.697729": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
+      "sha512": "sha512-6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
       "path": "xamarin.forms/3.1.0.697729",
       "hashPath": "xamarin.forms.3.1.0.697729.nupkg.sha512"
     }

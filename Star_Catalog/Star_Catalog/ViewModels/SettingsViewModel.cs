@@ -1,10 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Star_Catalog.Resources;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Text;
 
 namespace Star_Catalog.ViewModels
 {
@@ -20,14 +18,30 @@ namespace Star_Catalog.ViewModels
 
         public void Apply(int locale)
         {
-            Locales.Culture = new CultureInfo(locale == 0 ? "en-US" : "ru-RU");
+            switch(locale)
+            {
+                case 0:
+                    {
+                        Locales.Culture = new CultureInfo("en-US");
+                        break;
+                    }
+                case 1:
+                    {
+                        Locales.Culture = new CultureInfo("ru-RU");
+                        break;
+                    }
+                case 2:
+                    {
+                        Locales.Culture = new CultureInfo("be-BY");
+                        break;
+                    }
+            }
         }
 
         public void SaveSettings(int i)
         {
             
             var index = new Language() { locale = i };
-            //File.SetAttributes(path, FileAttributes.Normal);
             File.WriteAllText(path, JsonConvert.SerializeObject(index));
             Apply(i);
         }
@@ -36,7 +50,6 @@ namespace Star_Catalog.ViewModels
         {
             if (File.Exists(path))
             {
-                //File.SetAttributes(path, FileAttributes.Normal);
                 var json = File.ReadAllText(path);
                 var localeIndex = JsonConvert.DeserializeObject<Language>(json);
                 Apply(localeIndex.locale);

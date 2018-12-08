@@ -2,10 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Star_Catalog.Views.DSOPage">
-    <StackLayout>
+    <StackLayout BackgroundColor="#1f1f1f">
         
         <ListView x:Name="ConstellationsListView"
-                  ItemsSource="{Binding Items}"
                   
                   CachingStrategy="RecycleElement"
                   RowHeight="56"

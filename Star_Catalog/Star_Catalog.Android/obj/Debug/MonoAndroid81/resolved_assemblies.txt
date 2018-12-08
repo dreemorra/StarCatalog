@@ -75,4 +75,5 @@ C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\De
 C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\Debug\MonoAndroid81\android\assets\System.Threading.Tasks.dll
 C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\Debug\MonoAndroid81\android\assets\System.Globalization.dll
 C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Security.dll
+C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\Debug\MonoAndroid81\linksrc\be-BY\Star_Catalog.resources.dll
 C:\Users\Mora\source\repos\Star_Catalog\Star_Catalog\Star_Catalog.Android\obj\Debug\MonoAndroid81\linksrc\ru-RU\Star_Catalog.resources.dll

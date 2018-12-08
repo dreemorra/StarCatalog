@@ -17,7 +17,7 @@ namespace Star_Catalog.Views
 	public partial class StarsPage : ContentPage
 	{
         StarsViewModel starsView;
-        IOrderedEnumerable<string> sortedList = null;
+        IOrderedEnumerable<Star> sortedList = null;
 
         public StarsPage()
         {
@@ -26,7 +26,9 @@ namespace Star_Catalog.Views
             starsView = new StarsViewModel();
             Title = Locales.Title_Stars;
 
-            StarsListView.ItemsSource = starsView.stars_string;
+            searchbar.TextChanged += SearchBar_TextChanged;
+            StarsListView.ItemsSource = starsView.stars;
+            StarsListView.ItemSelected += async (s, e) => { await ConstellationsListView_ItemSelected(s, e); };
             ToolbarItems.Add(new ToolbarItem("", "sort_icon.xml", async () => { await Sort_click(); }, priority: 2));
             ToolbarItems.Add(new ToolbarItem("", "search_icon.xml", () => { ToggleSearchbar(); }, priority: 1));
         }
@@ -39,9 +41,9 @@ namespace Star_Catalog.Views
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                StarsListView.ItemsSource = starsView.stars_string;
+                StarsListView.ItemsSource = starsView.stars;
             else
-                StarsListView.ItemsSource = starsView.stars_string.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
+                StarsListView.ItemsSource = starsView.stars.Where(i => i.Name.ToLower().Contains(e.NewTextValue.ToLower()));
         }
 
         private async Task Sort_click()
@@ -51,16 +53,12 @@ namespace Star_Catalog.Views
             {
                 case "A-Z":
                     {
-                        sortedList = from element in starsView.stars_string
-                                     orderby element ascending
-                                     select element;
+                        sortedList = starsView.stars.OrderBy((obj) => { return obj.Name; });
                         break;
                     }
                 case "Z-A":
                     {
-                        sortedList = from element in starsView.stars_string
-                                     orderby element descending
-                                     select element;
+                        sortedList = starsView.stars.OrderByDescending((obj) => { return obj.Name; });
                         break;
                     }
                 case null:
@@ -72,19 +70,14 @@ namespace Star_Catalog.Views
             Debug.WriteLine("Action: " + action);
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async Task ConstellationsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.SelectedItem == null)
                 return;
-
-            Star clicked_item = starsView.stars.Find(item => item.ProperName.Contains(e.Item as string));
-
             InfoPage page = new InfoPage();
             await Navigation.PushModalAsync(page);
-            page.SetStarInfo(clicked_item);
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            page.SetStarInfo((Star)e.SelectedItem);
+            StarsListView.SelectedItem = null;
         }
     }
 }

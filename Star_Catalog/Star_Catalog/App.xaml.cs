@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Star_Catalog.Views;
 using Xamarin.Forms.Xaml;
 using Star_Catalog.ViewModels;
+using Xamarin.Forms.PlatformConfiguration;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Star_Catalog
@@ -12,6 +13,7 @@ namespace Star_Catalog
 
         public static event Action BatmanMode;
         public static void GoBatman() => BatmanMode();
+        //ConstellationsViewModel conscollection = new ConstellationsViewModel();
 
         public App()
         {
@@ -19,13 +21,15 @@ namespace Star_Catalog
            
             InitializeComponent();
 
-            loader.LoadSettings();
+            //conscollection.OpenCollection();
+            loader.LoadSettings();            
             MainPage = new MainPage();
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+            
         }
 
         protected override void OnSleep()

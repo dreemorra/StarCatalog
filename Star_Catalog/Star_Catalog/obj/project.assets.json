@@ -2,28 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CsvHelper/8.0.0-beta01": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.4.0",
-          "System.Reflection.TypeExtensions": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/CsvHelper.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/CsvHelper.dll": {}
-        }
-      },
-      "Microsoft.CSharp/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/Microsoft.CSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.CSharp.dll": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -57,55 +35,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "SQLitePCLRaw.bundle_green": "1.1.11"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLite-net.dll": {}
-        }
-      },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {},
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {},
-          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {}
-        }
-      },
-      "SQLitePCLRaw.core/1.1.11": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "System.Reflection.TypeExtensions/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Reflection.TypeExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Reflection.TypeExtensions.dll": {}
-        }
-      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "compile": {
@@ -126,90 +55,12 @@
     }
   },
   "libraries": {
-    "CsvHelper/8.0.0-beta01": {
-      "sha512": "8doP4+K/GMAWARODinGFN19fAFIQpxbeoVdXBuLitr0mP5EG3ugokz8xWGw+dPLxMckVyIBOxJ/pakZKa1fGwg==",
-      "type": "package",
-      "path": "csvhelper/8.0.0-beta01",
-      "files": [
-        ".signature.p7s",
-        "csvhelper.8.0.0-beta01.nupkg.sha512",
-        "csvhelper.nuspec",
-        "lib/net45/CsvHelper.dll",
-        "lib/net45/CsvHelper.xml",
-        "lib/netstandard2.0/CsvHelper.dll",
-        "lib/netstandard2.0/CsvHelper.xml"
-      ]
-    },
-    "Microsoft.CSharp/4.4.0": {
-      "sha512": "ShGjgRL3UHUXcoPSlq8jDB6b+9WHo4n8VcY9ex7egt6kuHFuK3Z6BUN9ClF3Y8dR1yIoaRkHPQBfX/IH5i/YXg==",
-      "type": "package",
-      "path": "microsoft.csharp/4.4.0",
-      "files": [
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/Microsoft.CSharp.dll",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.3/Microsoft.CSharp.dll",
-        "lib/netstandard2.0/Microsoft.CSharp.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.4.0.nupkg.sha512",
-        "microsoft.csharp.nuspec",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/Microsoft.CSharp.dll",
-        "ref/netcore50/Microsoft.CSharp.xml",
-        "ref/netcore50/de/Microsoft.CSharp.xml",
-        "ref/netcore50/es/Microsoft.CSharp.xml",
-        "ref/netcore50/fr/Microsoft.CSharp.xml",
-        "ref/netcore50/it/Microsoft.CSharp.xml",
-        "ref/netcore50/ja/Microsoft.CSharp.xml",
-        "ref/netcore50/ko/Microsoft.CSharp.xml",
-        "ref/netcore50/ru/Microsoft.CSharp.xml",
-        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
-        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.0/Microsoft.CSharp.dll",
-        "ref/netstandard1.0/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
-        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
-        "ref/netstandard2.0/Microsoft.CSharp.dll",
-        "ref/netstandard2.0/Microsoft.CSharp.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -220,10 +71,12 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -347,10 +200,11 @@
       ]
     },
     "Newtonsoft.Json/12.0.1-beta1": {
-      "sha512": "cmCtkmZzWoHcwh96riskpZW9RqrAERDTCrWWXwfTdnKqOUIy2AMFF6Jje2jjKIoSVekwoTmf+WRr9cGRx8hRsQ==",
+      "sha512": "lOrrJQNqp777rhIh7943aQ0v7C8FQELEhsSxgqQ9hrUUwfbl3HaMdeLKn6NuHEb3RU3W/+LJKMnJBTP2mGDseQ==",
       "type": "package",
       "path": "newtonsoft.json/12.0.1-beta1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
@@ -384,160 +238,12 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "sqlite-net-pcl/1.5.231": {
-      "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
-      "type": "package",
-      "path": "sqlite-net-pcl/1.5.231",
-      "files": [
-        ".signature.p7s",
-        "lib/netstandard1.1/SQLite-net.deps.json",
-        "lib/netstandard1.1/SQLite-net.dll",
-        "lib/netstandard1.1/SQLite-net.xml",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
-        "sqlite-net-pcl.1.5.231.nupkg.sha512",
-        "sqlite-net-pcl.nuspec"
-      ]
-    },
-    "SQLitePCLRaw.bundle_green/1.1.11": {
-      "sha512": "HOD1/Jg9VZtrOyPUCD9reQOXHq4r+fNe24qw5nghuiUcKch+9jePeRpt6MqGGUFhg2KW89KvE/RFlhpbfF8pKA==",
-      "type": "package",
-      "path": "sqlitepclraw.bundle_green/1.1.11",
-      "files": [
-        ".signature.p7s",
-        "build/wp8/SQLitePCLRaw.bundle_green.targets",
-        "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
-        "build/wp80/arm/SQLitePCLRaw.batteries_v2.dll",
-        "build/wp80/x86/SQLitePCLRaw.batteries_green.dll",
-        "build/wp80/x86/SQLitePCLRaw.batteries_v2.dll",
-        "lib/MonoAndroid/SQLitePCLRaw.batteries_green.dll",
-        "lib/MonoAndroid/SQLitePCLRaw.batteries_v2.dll",
-        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_green.dll",
-        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_v2.dll",
-        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
-        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/net35/SQLitePCLRaw.batteries_green.dll",
-        "lib/net35/SQLitePCLRaw.batteries_v2.dll",
-        "lib/net40/SQLitePCLRaw.batteries_green.dll",
-        "lib/net40/SQLitePCLRaw.batteries_v2.dll",
-        "lib/net45/SQLitePCLRaw.batteries_green.dll",
-        "lib/net45/SQLitePCLRaw.batteries_v2.dll",
-        "lib/netcoreapp/SQLitePCLRaw.batteries_green.dll",
-        "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll",
-        "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll",
-        "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll",
-        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
-        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
-        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
-        "lib/uap10.0/SQLitePCLRaw.batteries_green.dll",
-        "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll",
-        "lib/win8/SQLitePCLRaw.batteries_green.dll",
-        "lib/win8/SQLitePCLRaw.batteries_v2.dll",
-        "lib/win81/SQLitePCLRaw.batteries_green.dll",
-        "lib/win81/SQLitePCLRaw.batteries_v2.dll",
-        "lib/wp8/_._",
-        "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
-        "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
-        "sqlitepclraw.bundle_green.nuspec"
-      ]
-    },
-    "SQLitePCLRaw.core/1.1.11": {
-      "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
-      "type": "package",
-      "path": "sqlitepclraw.core/1.1.11",
-      "files": [
-        ".signature.p7s",
-        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
-        "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
-        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
-        "lib/net35/SQLitePCLRaw.core.dll",
-        "lib/net40/SQLitePCLRaw.core.dll",
-        "lib/net45/SQLitePCLRaw.core.dll",
-        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
-        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
-        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
-        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
-        "lib/uap10.0/SQLitePCLRaw.core.dll",
-        "lib/win8/SQLitePCLRaw.core.dll",
-        "lib/win81/SQLitePCLRaw.core.dll",
-        "lib/wpa81/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.1.1.11.nupkg.sha512",
-        "sqlitepclraw.core.nuspec"
-      ]
-    },
-    "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "JRxOAH6by+wn1gNnZc9jf2HbO/szhMJuLY2w44nEW77354WntXlFzWSVkx6280Uvcl3URZ/At+444vjX0/X1Aw==",
-      "type": "package",
-      "path": "system.reflection.typeextensions/4.4.0",
-      "files": [
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Reflection.TypeExtensions.dll",
-        "lib/net461/System.Reflection.TypeExtensions.dll",
-        "lib/netcore50/System.Reflection.TypeExtensions.dll",
-        "lib/netcoreapp1.0/System.Reflection.TypeExtensions.dll",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
-        "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
-        "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Reflection.TypeExtensions.dll",
-        "ref/net461/System.Reflection.TypeExtensions.dll",
-        "ref/net461/System.Reflection.TypeExtensions.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.3/System.Reflection.TypeExtensions.dll",
-        "ref/netstandard1.3/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/de/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/es/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/fr/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/it/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/ja/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/ko/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/ru/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/zh-hans/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.3/zh-hant/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/System.Reflection.TypeExtensions.dll",
-        "ref/netstandard1.5/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/de/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/es/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/fr/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/it/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/ja/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/ko/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/ru/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/zh-hans/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
-        "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
-        "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
-        "system.reflection.typeextensions.4.4.0.nupkg.sha512",
-        "system.reflection.typeextensions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -687,11 +393,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "CsvHelper >= 8.0.0-beta01",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.1-beta1",
-      "Xamarin.Forms >= 3.1.0.697729",
-      "sqlite-net-pcl >= 1.5.231"
+      "Xamarin.Forms >= 3.1.0.697729"
     ]
   },
   "packageFolders": {
@@ -701,11 +405,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mora\\source\\repos\\Star_Catalog\\Star_Catalog\\Star_Catalog\\Star_Catalog.csproj",
+      "projectUniqueName": "D:\\Projects\\Star_Catalog\\Star_Catalog\\Star_Catalog\\Star_Catalog.csproj",
       "projectName": "Star_Catalog",
-      "projectPath": "C:\\Users\\Mora\\source\\repos\\Star_Catalog\\Star_Catalog\\Star_Catalog\\Star_Catalog.csproj",
+      "projectPath": "D:\\Projects\\Star_Catalog\\Star_Catalog\\Star_Catalog\\Star_Catalog.csproj",
       "packagesPath": "C:\\Users\\Mora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mora\\source\\repos\\Star_Catalog\\Star_Catalog\\Star_Catalog\\obj\\",
+      "outputPath": "D:\\Projects\\Star_Catalog\\Star_Catalog\\Star_Catalog\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -735,10 +439,6 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "CsvHelper": {
-            "target": "Package",
-            "version": "[8.0.0-beta01, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -752,10 +452,6 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[3.1.0.697729, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.5.231, )"
           }
         },
         "imports": [

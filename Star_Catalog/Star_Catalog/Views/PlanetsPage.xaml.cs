@@ -17,16 +17,17 @@ namespace Star_Catalog.Views
 	public partial class PlanetsPage : ContentPage
 	{
         PlanetsViewModel planetsView;
-        IOrderedEnumerable<string> sortedList = null;
+        IOrderedEnumerable<Planet> sortedList = null;
 
         public PlanetsPage()
         {
             InitializeComponent();
-            Title = Locales.Title_Planets;
             planetsView = new PlanetsViewModel();
+            Title = Locales.Title_Constellations;
 
-            PlanetsListView.ItemsSource = planetsView.planets_string;
-
+            searchbar.TextChanged += SearchBar_TextChanged;
+            PlanetsListView.ItemsSource = planetsView.planets;
+            PlanetsListView.ItemSelected += async (s, e) => { await PlanetsListView_ItemSelected(s, e); };
             ToolbarItems.Add(new ToolbarItem("", "sort_icon.xml", async () => { await Sort_click(); }, priority: 2));
             ToolbarItems.Add(new ToolbarItem("", "search_icon.xml", () => { ToggleSearchbar(); }, priority: 1));
         }
@@ -39,10 +40,9 @@ namespace Star_Catalog.Views
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                PlanetsListView.ItemsSource = planetsView.planets_string;
+                PlanetsListView.ItemsSource = planetsView.planets;
             else
-                PlanetsListView.ItemsSource = planetsView.planets_string.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));
-
+                PlanetsListView.ItemsSource = planetsView.planets.Where(i => i.Name.ToLower().Contains(e.NewTextValue.ToLower()));
         }
 
         private async Task Sort_click()
@@ -52,16 +52,12 @@ namespace Star_Catalog.Views
             {
                 case "A-Z":
                     {
-                        sortedList = from element in planetsView.planets_string
-                                     orderby element ascending
-                                     select element;
+                        sortedList = planetsView.planets.OrderBy((obj) => { return obj.Name; });
                         break;
                     }
                 case "Z-A":
                     {
-                        sortedList = from element in planetsView.planets_string
-                                     orderby element descending
-                                     select element;
+                        sortedList = planetsView.planets.OrderByDescending((obj) => { return obj.Name; });
                         break;
                     }
                 case null:
@@ -73,19 +69,14 @@ namespace Star_Catalog.Views
             Debug.WriteLine("Action: " + action);
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async Task PlanetsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.SelectedItem == null)
                 return;
-
-            Planet clicked_item = planetsView.planets.Find(item => item.Name.Contains(e.Item as string));
-
             InfoPage page = new InfoPage();
             await Navigation.PushModalAsync(page);
-            page.SetPlanetInfo(clicked_item);
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            page.SetPlanetInfo((Planet)e.SelectedItem);
+            PlanetsListView.SelectedItem = null;
         }
     }
 }

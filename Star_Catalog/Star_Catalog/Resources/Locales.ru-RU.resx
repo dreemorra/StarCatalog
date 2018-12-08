@@ -163,7 +163,7 @@
     <value>Спектральный тип:</value>
   </data>
   <data name="Info_Stars" xml:space="preserve">
-    <value>Звезды:</value>
+    <value>Яркие звезды:</value>
   </data>
   <data name="Info_Velocity" xml:space="preserve">
     <value>Радиальная скорость:</value>
@@ -181,7 +181,7 @@
     <value>Язык:</value>
   </data>
   <data name="Settings_LangEN" xml:space="preserve">
-    <value>Английский</value>
+    <value>English</value>
   </data>
   <data name="Settings_LangRU" xml:space="preserve">
     <value>Русский</value>
@@ -218,5 +218,65 @@
   </data>
   <data name="Welcome_Text" xml:space="preserve">
     <value>Добро пожаловать в Starrs! - каталог звездного неба.</value>
+  </data>
+  <data name="Settings_LangBY" xml:space="preserve">
+    <value>Беларуская</value>
+  </data>
+  <data name="Bayer" xml:space="preserve">
+    <value>Каталог Байера:</value>
+  </data>
+  <data name="BF" xml:space="preserve">
+    <value>Каталог Байера/Флемстида:</value>
+  </data>
+  <data name="Gliese" xml:space="preserve">
+    <value>Каталог Глизе:</value>
+  </data>
+  <data name="HD" xml:space="preserve">
+    <value>Каталог Генри Дрейпера:</value>
+  </data>
+  <data name="HIP" xml:space="preserve">
+    <value>Каталог Гиппарха:</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Каталог ярких звёзд (Гарвард):</value>
+  </data>
+  <data name="Info_Aphelion" xml:space="preserve">
+    <value>Aphelion:</value>
+  </data>
+  <data name="Info_AU" xml:space="preserve">
+    <value>а.е.</value>
+  </data>
+  <data name="Info_Days" xml:space="preserve">
+    <value>дней</value>
+  </data>
+  <data name="Info_Density" xml:space="preserve">
+    <value>Density:</value>
+  </data>
+  <data name="Info_Eccentricity" xml:space="preserve">
+    <value>Eccentricity:</value>
+  </data>
+  <data name="Info_Gravity" xml:space="preserve">
+    <value>Gravity:</value>
+  </data>
+  <data name="Info_OrbitalP" xml:space="preserve">
+    <value>Orbital period:</value>
+  </data>
+  <data name="Info_OrbitalS" xml:space="preserve">
+    <value>Orbital speed:</value>
+  </data>
+  <data name="Info_Perihelion" xml:space="preserve">
+    <value>Perihelion:</value>
+  </data>
+  <data name="Info_Satellites" xml:space="preserve">
+    <value>Satellites:</value>
+  </data>
+  <data name="Info_SemiMajor" xml:space="preserve">
+    <value>Semi-major axis:</value>
+  </data>
+  <data name="Info_Synodic" xml:space="preserve">
+    <value>Synodical period:</value>
+  </data>
+  <data name="Info_Temperature" xml:space="preserve">
+    <value>Температура:</value>
   </data>
 </root>

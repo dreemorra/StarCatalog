@@ -23,6 +23,7 @@ namespace Star_Catalog.Views
 
             PickLang.Items.Add(Locales.Settings_LangEN);
             PickLang.Items.Add(Locales.Settings_LangRU);
+            PickLang.Items.Add(Locales.Settings_LangBY);
 
             ApplyButton.Text = Locales.Settings_Apply;
 
