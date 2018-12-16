@@ -34,22 +34,26 @@ namespace Star_Catalog.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             CopyAsset("constellations.json");
             CopyAsset("planets.json");
+            CopyAsset("dso.json");
             var app = new App();
             LoadApplication(app);
-            
 
             App.BatmanMode += () =>
             {
                 theme = (theme + 1) % 2;
                 System.Diagnostics.Debug.WriteLine($"Gone Batman, theme is {theme}");
-                SetTheme(theme);
-                Recreate();
+                if (theme == 1)
+                    SetTheme(Resource.Style.LightTheme);
+                if (theme == 0)
+                    SetTheme(Resource.Style.DarkTheme);
             };
         }
+        
     }
 }

@@ -31,6 +31,20 @@ namespace Star_Catalog.Views
             StarsListView.ItemSelected += async (s, e) => { await ConstellationsListView_ItemSelected(s, e); };
             ToolbarItems.Add(new ToolbarItem("", "sort_icon.xml", async () => { await Sort_click(); }, priority: 2));
             ToolbarItems.Add(new ToolbarItem("", "search_icon.xml", () => { ToggleSearchbar(); }, priority: 1));
+            StarsListView.ItemAppearing += (sender, e) =>
+            {
+                //hit bottom!
+                if (e.Item == starsView.stars[starsView.stars.Count - 1])
+                {
+
+                    starsView.DownloadJson(50);
+                    StarsListView.RefreshCommand = new Command(() =>
+                    {
+                        StarsListView.ItemsSource = starsView.stars;
+                        StarsListView.IsRefreshing = false;
+                    });
+                }
+            };
         }
 
         private void ToggleSearchbar()

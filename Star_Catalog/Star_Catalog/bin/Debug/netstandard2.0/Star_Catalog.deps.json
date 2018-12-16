@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "8b5bfdac3cf89749a65cae92f6a8b6326669453d"
+    "signature": "83b284ff9622c20e3a5e24c0fe7298e63c685c7d"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,8 +10,8 @@
       "Star_Catalog/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "12.0.1-beta1",
-          "Xamarin.Forms": "3.1.0.697729"
+          "Newtonsoft.Json": "12.0.1",
+          "Xamarin.Forms": "4.0.0.8055-pre1"
         },
         "runtime": {
           "Star_Catalog.dll": {}
@@ -31,15 +31,15 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "Newtonsoft.Json/12.0.1-beta1": {
+      "Newtonsoft.Json/12.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.22628"
+            "fileVersion": "12.0.1.22727"
           }
         }
       },
-      "Xamarin.Forms/3.1.0.697729": {
+      "Xamarin.Forms/4.0.0.8055-pre1": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
@@ -77,19 +77,19 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.1-beta1": {
+    "Newtonsoft.Json/12.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lOrrJQNqp777rhIh7943aQ0v7C8FQELEhsSxgqQ9hrUUwfbl3HaMdeLKn6NuHEb3RU3W/+LJKMnJBTP2mGDseQ==",
-      "path": "newtonsoft.json/12.0.1-beta1",
-      "hashPath": "newtonsoft.json.12.0.1-beta1.nupkg.sha512"
+      "sha512": "sha512-pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
     },
-    "Xamarin.Forms/3.1.0.697729": {
+    "Xamarin.Forms/4.0.0.8055-pre1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
-      "path": "xamarin.forms/3.1.0.697729",
-      "hashPath": "xamarin.forms.3.1.0.697729.nupkg.sha512"
+      "sha512": "sha512-qpG3VScl/47kYVXQ6pLvH45ScOiISU45g9lkPm8pNFdyZBqiu8pmVUEK7Q+AisEuLSz7Xx4MC8g+q0yQUHqcjA==",
+      "path": "xamarin.forms/4.0.0.8055-pre1",
+      "hashPath": "xamarin.forms.4.0.0.8055-pre1.nupkg.sha512"
     }
   }
 }

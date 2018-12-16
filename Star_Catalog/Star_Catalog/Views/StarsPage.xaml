@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Star_Catalog.Views.StarsPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#1f1f1f">
+        <StackLayout>
             <SearchBar x:Name="searchbar"
                        HeightRequest="56"
                        Scale="1"
@@ -13,7 +13,9 @@
                 CachingStrategy="RecycleElement"
                 RowHeight="56"
                 HasUnevenRows="True"
-                SelectionMode="Single">
+                SelectionMode="Single"
+                IsPullToRefreshEnabled="True"
+                >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

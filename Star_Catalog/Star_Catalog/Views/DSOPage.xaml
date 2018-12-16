@@ -2,34 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Star_Catalog.Views.DSOPage">
-    <StackLayout BackgroundColor="#1f1f1f">
-        
-        <ListView x:Name="ConstellationsListView"
-                  
-                  CachingStrategy="RecycleElement"
-                  RowHeight="56"
-                  HasUnevenRows="True">
-
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout 
-                           Orientation="Horizontal">
-                            <Frame 
-                                BackgroundColor="Cyan"
-                                Margin="16, 8"
-                                Padding="20"
-                                CornerRadius="1000"/>
-                            <Label
-                                Text="{Binding .}" 
-                                Font="Medium"
-                                FontSize="16" 
-                                HorizontalTextAlignment="Start" 
-                                VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="searchbar"
+                       HeightRequest="56"
+                       Scale="1"
+                       IsVisible="False"
+                       HorizontalOptions="FillAndExpand"/>
+            <ListView x:Name="dsoListView"
+                CachingStrategy="RecycleElement"
+                RowHeight="56"
+                HasUnevenRows="True"
+                SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout 
+                               Orientation="Horizontal">
+                                <Frame 
+                                   BackgroundColor="DarkMagenta"
+                                   Margin="16, 8"
+                                   Padding="20"
+                                   CornerRadius="1000"/>
+                                <Label
+                                   Text="{Binding .Name}"
+                                   FontSize="16" 
+                                   HorizontalTextAlignment="Start" 
+                                   VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -31,7 +31,7 @@ namespace Star_Catalog.Views
                 new MenuItem {ID = (int)MenuItemType.Constellations, Title = Locales.Title_Constellations, Icon = "constellations_icon.xml"},
                  new MenuItem {ID = (int)MenuItemType.Stars, Title = Locales.Title_Stars, Icon = "stars_icon.xml"},
                  new MenuItem {ID = (int)MenuItemType.Planets, Title = Locales.Title_Planets, Icon = "planets_icon.xml"},
-                 new MenuItem {ID = (int)MenuItemType.DSO, Title = Locales.Title_DSO, Icon = "stars_icon.xml"},
+                 new MenuItem {ID = (int)MenuItemType.DSO, Title = Locales.Title_DSO, Icon = "dso_icon.xml"},
                  new MenuItem {ID = (int)MenuItemType.Settings, Title = Locales.Title_Settings, Icon = "settings_icon.xml"},
                  new MenuItem {ID = (int)MenuItemType.About, Title = Locales.Title_About, Icon = "about_icon.xml"}
             };

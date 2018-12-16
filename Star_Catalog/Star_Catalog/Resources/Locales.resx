@@ -279,4 +279,22 @@
   <data name="Info_Temperature" xml:space="preserve">
     <value>Temperature:</value>
   </data>
+  <data name="Info_Designations" xml:space="preserve">
+    <value>Designations:</value>
+  </data>
+  <data name="Info_Diameter" xml:space="preserve">
+    <value>Diameter:</value>
+  </data>
+  <data name="Info_LY" xml:space="preserve">
+    <value>ly</value>
+  </data>
+  <data name="Info_Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Info_RadiusEarth" xml:space="preserve">
+    <value>R🜨</value>
+  </data>
+  <data name="Info_WeightEarth" xml:space="preserve">
+    <value>M🜨</value>
+  </data>
 </root>

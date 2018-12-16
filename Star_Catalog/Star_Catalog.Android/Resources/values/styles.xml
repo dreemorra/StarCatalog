@@ -2,7 +2,7 @@
 <resources>
 
   <!-- Base theme applied no matter what API -->
-  <style name="DarkTheme" parent="Theme.AppCompat" id="0">
+  <style name="DarkTheme" parent="Theme.AppCompat">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
     <item name="windowNoTitle">true</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
@@ -24,16 +24,17 @@
     <item name="colorAccent">#FF4081</item>
   </style>
 
-  <style name="LightTheme" parent="Theme.AppCompat.Light" id="1">
+  <style name="LightTheme" parent="Theme.AppCompat.Light">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
     <item name="windowNoTitle">true</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
     <item name="windowActionBar">false</item>
-    <item name="colorPrimary">#FFFFFF</item>
-    <item name="colorPrimaryDark">#FFFFFF</item>
+    <item name="colorPrimary">#000051</item>
+    <item name="colorPrimaryDark">#00002a</item>
     <item name="colorAccent">#000000</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
+    <item name="android:colorActivatedHighlight">@color/listViewHighlighted</item>
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>

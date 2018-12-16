@@ -6,6 +6,7 @@ using Star_Catalog.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Star_Catalog.Resources;
+using System.Collections.Generic;
 
 namespace Star_Catalog.Views
 {

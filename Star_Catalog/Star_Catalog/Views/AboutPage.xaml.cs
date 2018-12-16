@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Star_Catalog.Resources;
+using Star_Catalog.ViewModels;
 
 namespace Star_Catalog.Views
 {
@@ -15,10 +16,12 @@ namespace Star_Catalog.Views
 	{
 		public AboutPage ()
 		{
-			InitializeComponent ();
+            var vm = new AboutViewModel();
+            InitializeComponent ();
             Title = Locales.Title_About;
             AboutAppText.Text = Locales.AboutApp_Text;
             About_Xamarin.Text = Locales.About_XamarinText;
+            XamarinFrame.GestureRecognizers.Add(new TapGestureRecognizer((obj) => vm.OpenXamarin()));
         }
 	}
 }

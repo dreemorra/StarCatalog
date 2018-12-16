@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:local="clr-namespace:Star_Catalog.Views"
             x:Class="Star_Catalog.Views.InfoPage">
-    <StackLayout BackgroundColor="#1f1f1f">
-        <Frame HeightRequest="150" x:Name="background">
+    <StackLayout x:Name="page">
+        <Frame HeightRequest="180" x:Name="background">
             <Image x:Name="imagee"
                    HorizontalOptions="CenterAndExpand" 
-                   Scale="3"/>
+                   Scale="3"
+                   />
         </Frame>
-        <TableView HasUnevenRows="True">
+        <TableView HasUnevenRows="True" x:Name="obj_info">
             <TableView.Root>
                 <TableRoot>
                     <TableSection x:Name="Section_Description">

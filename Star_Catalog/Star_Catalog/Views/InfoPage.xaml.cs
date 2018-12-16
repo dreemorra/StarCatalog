@@ -15,13 +15,13 @@ namespace Star_Catalog.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoPage : ContentPage
     {
+
         public InfoPage()
         {
             InitializeComponent();
             Title = Locales.Title_Info;
             Section_Characteristics.Title = Locales.Info_Characteristics;
             Section_Description.Title = Locales.Info_Description;
-
         }
 
         public void SetStarInfo(Star item)
@@ -64,11 +64,24 @@ namespace Star_Catalog.Views
                 $"{Locales.Info_OrbitalP} {item.orbitalperiod} {Locales.Info_Days}\n " +
                 $"{Locales.Info_Synodic} {item.synodicperiod} {Locales.Info_Days}\n " +
                 $"{Locales.Info_OrbitalS} {item.orbitalspeed} {Locales.Info_VelocityDim}\n " +
-                $"{Locales.Info_Radius} {item.radius} {Locales.Info_Meters} \n " +
-                $"{Locales.Info_Mass} {item.mass} {Locales.Info_Weight} \n " +
+                $"{Locales.Info_Radius} {item.radius} {Locales.Info_RadiusEarth} \n " +
+                $"{Locales.Info_Mass} {item.mass} {Locales.Info_WeightEarth} \n " +
                 $"{Locales.Info_Density} {item.density} \n " +
                 $"{Locales.Info_Gravity} {item.gravity} \n " +
                 $"{Locales.Info_Satellites} {item.satellites}";
+            imagee.Source = item.pic;
+        }
+
+        public void SetDSOInfo(DSO item)
+        {
+            label_description.Text = 
+                $" {Locales.Info_Name} {item.Name} \n " +
+                $"{Locales.Info_Designations} {item.designations}";
+            label_characteristics.Text = 
+                $"{Locales.Info_Type} {item.type} \n " +
+                $"{Locales.Info_Constellation} {item.Constellation} \n " +
+                $"{Locales.Info_Magnitude} {item.mag} \n " +
+                $"{Locales.Info_Diameter} {item.size} {Locales.Info_LY}";
             imagee.Source = item.pic;
         }
     }

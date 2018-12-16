@@ -4,7 +4,7 @@
              x:Class="Star_Catalog.Views.ConstellationsPage">
 
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#1f1f1f">
+        <StackLayout>
             <SearchBar x:Name="searchbar"
                        HeightRequest="56"
                        Scale="1"
@@ -21,10 +21,11 @@
                             <StackLayout 
                                Orientation="Horizontal">
                                 <Frame 
-                                   BackgroundColor="Cyan"
+                                   BackgroundColor="DarkCyan"
                                    Margin="16, 8"
-                                   Padding="20"
-                                   CornerRadius="10090"/>
+                                   WidthRequest="5"
+                                   HeightRequest="5"
+                                   CornerRadius="20000"/>
                                 <Label
                                    Text="{Binding .Name}"
                                    FontSize="16" 

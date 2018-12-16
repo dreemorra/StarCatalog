@@ -205,6 +205,24 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Designations:.
+        /// </summary>
+        internal static string Info_Designations {
+            get {
+                return ResourceManager.GetString("Info_Designations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diameter:.
+        /// </summary>
+        internal static string Info_Diameter {
+            get {
+                return ResourceManager.GetString("Info_Diameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Distance:.
         /// </summary>
         internal static string Info_Distance {
@@ -237,6 +255,15 @@ namespace Star_Catalog.Resources {
         internal static string Info_Luminocity {
             get {
                 return ResourceManager.GetString("Info_Luminocity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ly.
+        /// </summary>
+        internal static string Info_LY {
+            get {
+                return ResourceManager.GetString("Info_LY", resourceCulture);
             }
         }
         
@@ -322,6 +349,15 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to R🜨.
+        /// </summary>
+        internal static string Info_RadiusEarth {
+            get {
+                return ResourceManager.GetString("Info_RadiusEarth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Satellites:.
         /// </summary>
         internal static string Info_Satellites {
@@ -376,6 +412,15 @@ namespace Star_Catalog.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Type:.
+        /// </summary>
+        internal static string Info_Type {
+            get {
+                return ResourceManager.GetString("Info_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Radial velocity:.
         /// </summary>
         internal static string Info_Velocity {
@@ -399,6 +444,15 @@ namespace Star_Catalog.Resources {
         internal static string Info_Weight {
             get {
                 return ResourceManager.GetString("Info_Weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to M🜨.
+        /// </summary>
+        internal static string Info_WeightEarth {
+            get {
+                return ResourceManager.GetString("Info_WeightEarth", resourceCulture);
             }
         }
         

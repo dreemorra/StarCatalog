@@ -4,9 +4,9 @@
              x:Class="Star_Catalog.Views.AboutPage">
     <ContentPage.Content>
 
-        <StackLayout BackgroundColor="#1f1f1f">
+        <StackLayout>
             <StackLayout>
-                <Frame BackgroundColor="Transparent">
+                <Frame BackgroundColor="Transparent" x:Name="XamarinFrame">
                     <Image Source="xamarin.png"
                        HorizontalOptions="Center"
                      />

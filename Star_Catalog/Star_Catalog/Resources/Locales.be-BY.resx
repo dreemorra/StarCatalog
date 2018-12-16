@@ -202,7 +202,7 @@
     <value>Сузор'я</value>
   </data>
   <data name="Title_DSO" xml:space="preserve">
-    <value>Туманнасці</value>
+    <value>Глыбокі космас</value>
   </data>
   <data name="Title_Info" xml:space="preserve">
     <value>Інфармацыя</value>
@@ -241,7 +241,7 @@
     <value>Каталог яркіх зорак (Гарвард):</value>
   </data>
   <data name="Info_Aphelion" xml:space="preserve">
-    <value>Aphelion:</value>
+    <value>Афелій:</value>
   </data>
   <data name="Info_AU" xml:space="preserve">
     <value>а. а.</value>
@@ -250,33 +250,45 @@
     <value>дзён</value>
   </data>
   <data name="Info_Density" xml:space="preserve">
-    <value>Density:</value>
+    <value>Сярэдняя шчыльнасць:</value>
   </data>
   <data name="Info_Eccentricity" xml:space="preserve">
-    <value>Eccentricity:</value>
+    <value>Эксцэнтрысітэт:</value>
   </data>
   <data name="Info_Gravity" xml:space="preserve">
-    <value>Gravity:</value>
+    <value>Паскарэнне свабоднага падзення:</value>
   </data>
   <data name="Info_OrbitalP" xml:space="preserve">
-    <value>Orbital period:</value>
+    <value>Сідэрычны перыяд:</value>
   </data>
   <data name="Info_OrbitalS" xml:space="preserve">
-    <value>Orbital speed:</value>
+    <value>Арбітальная скорасць:</value>
   </data>
   <data name="Info_Perihelion" xml:space="preserve">
-    <value>Perihelion:</value>
+    <value>Перыгелій:</value>
   </data>
   <data name="Info_Satellites" xml:space="preserve">
-    <value>Satellites:</value>
+    <value>Спутнікі:</value>
   </data>
   <data name="Info_SemiMajor" xml:space="preserve">
-    <value>Semi-major axis:</value>
+    <value>Вялікая паўвось:</value>
   </data>
   <data name="Info_Synodic" xml:space="preserve">
-    <value>Synodical period:</value>
+    <value>Сінадычны перыяд:</value>
   </data>
   <data name="Info_Temperature" xml:space="preserve">
     <value>Тэмпература:</value>
+  </data>
+  <data name="Info_Designations" xml:space="preserve">
+    <value>Іншыя абазначэння:</value>
+  </data>
+  <data name="Info_Diameter" xml:space="preserve">
+    <value>Дыяметр:</value>
+  </data>
+  <data name="Info_LY" xml:space="preserve">
+    <value>св. год</value>
+  </data>
+  <data name="Info_Type" xml:space="preserve">
+    <value>Тып:</value>
   </data>
 </root>

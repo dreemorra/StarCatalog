@@ -13,13 +13,20 @@ namespace Star_Catalog.ViewModels
 
         private static readonly HttpClient client = new HttpClient();
 
-        public void DownloadJson()
+        public int offset = 0;
+
+        public void DownloadJson(int add)
         {
             try
             {
-                var responseString = client.GetStringAsync("http://fpmi-sosat.tk/stars?condition=mag%20%3C%206%20ORDER%20BY%20lum%20DESC&count=50").Result;
+                offset += add;
+                var uri = $"http://fpmi-sosat.tk/stars?condition=mag%20%3C%206%20ORDER%20BY%20lum%20DESC&count=50&offset=" + $"{offset}";
+                var responseString = client.GetStringAsync(uri).Result;
                 var respParsed = JObject.Parse(responseString);
-                stars = ((JArray) respParsed["response"]).ToObject<List<Star>>();
+                var starss = ((JArray) respParsed["response"]).ToObject<List<Star>>();
+                if (stars == null)
+                    stars = starss;
+                else stars.AddRange(starss);
             }
             catch(Exception e)
             {
@@ -29,7 +36,7 @@ namespace Star_Catalog.ViewModels
 
         public StarsViewModel()
         {
-            DownloadJson();
+            DownloadJson(0);
         }
     }
 }

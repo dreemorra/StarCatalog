@@ -39,9 +39,9 @@ namespace Star_Catalog.Models
         public string descriptionRU { get; set; }
         public string descriptionBY { get; set; }
 		public int? issatellite { get; set; }
-        public double? mass { get; set; }
-        public double? radius { get; set; }
-        public double? density { get; set; }
+        public string mass { get; set; }
+        public string radius { get; set; }
+        public string density { get; set; }
         public double? gravity { get; set; }
         public double? aphelion { get; set; }
         public double? perihelion { get; set; }
